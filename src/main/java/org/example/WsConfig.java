@@ -44,8 +44,10 @@ public class WsConfig extends WsConfigurerAdapter {
 
     @Override
     public void addInterceptors(List<EndpointInterceptor> interceptors) {
-        // interceptors.add(new CustomValidatingInterceptor(schema(), config()));
-        interceptors.add(new CustomValidatingInterceptor(schema(), null));
+        // aop not working
+        interceptors.add(new CustomValidatingInterceptor(schema(), config()));
+        // aop working
+        // interceptors.add(new CustomValidatingInterceptor(schema(), null));
     }
 
     @Bean
