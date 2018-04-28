@@ -62,8 +62,8 @@ public class WsConfig extends WsConfigurerAdapter {
     }
 
     @Bean
-    public Object testAop() {
-        System.out.println("is config aop proxy: " + AopUtils.isAopProxy(config()));
+    public Object testAop(AppConfig config) {
+        System.out.println("is config aop proxy: " + AopUtils.isAopProxy(config));
 
         return null;
     }
