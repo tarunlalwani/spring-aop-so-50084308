@@ -1,6 +1,7 @@
 package org.example;
 
 import org.aspect.PersistentOperation;
+import org.springframework.context.annotation.EnableAspectJAutoProxy;
 
 public class AppConfig {
 
@@ -13,6 +14,7 @@ public class AppConfig {
 
     @PersistentOperation
     public void setNum(Integer num) {
+
         this.num = num;
     }
 
@@ -22,6 +24,7 @@ public class AppConfig {
 
     @PersistentOperation
     public void setText(String text) {
+
         this.text = text;
     }
 
